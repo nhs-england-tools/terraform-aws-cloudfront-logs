@@ -1,0 +1,31 @@
+{
+  "name": "cloudfront-log-processor",
+  "version": "1.0.0",
+  "description": "Transfer S3 Logs to CloudWatch",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/*.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild src/index.ts --bundle --minify --outfile=index.js --platform=node"
+  },
+  "author": "Thomas Judd-Cooper <thomas.judd-cooper1@nhs.net>",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch": "^3.431.0",
+    "@aws-sdk/client-cloudwatch-logs": "^3.431.0",
+    "@aws-sdk/client-s3": "^3.431.0",
+    "adm-zip": "^0.5.10",
+    "aws-lambda": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.3",
+    "@types/aws-lambda": "^8.10.125",
+    "esbuild": "^0.19.5",
+    "eslint": "^8.51.0",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^5.2.2"
+  }
+}
